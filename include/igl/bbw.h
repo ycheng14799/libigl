@@ -67,6 +67,21 @@ namespace igl
     const Eigen::PlainObjectBase<Derivedbc> & bc,
     BBWData & data,
     Eigen::PlainObjectBase<DerivedW> & W);
+
+  template <
+	typename DerivedV,
+	typename Derivedb,
+	typename Derivedbc,
+	typename DerivedW,
+	typename Scalar>
+	IGL_INLINE bool bbw(
+		const Eigen::PlainObjectBase<DerivedV> & V,
+		const Eigen::SparseCompressedBase<Scalar> & L,
+		const Eigen::SparseCompressedBase<Scalar> & M,
+		const Eigen::PlainObjectBase<Derivedb> & b,
+		const Eigen::PlainObjectBase<Derivedbc> & bc,
+		BBWData & data,
+		Eigen::PlainObjectBase<DerivedW> & W);
 }
 
 #ifndef IGL_STATIC_LIBRARY

@@ -167,6 +167,8 @@ template <
 	// Build biharmonic operator
 	Eigen::SparseMatrix<typename DerivedV::Scalar> Q;
 	harmonic(L, M, 2, Q);
+	//Eigen::SparseMatrix<typename DerivedV::Scalar> Q = L.transpose() * M.cwiseInverse() * L;
+	
 	W.derived().resize(n, m);
 	// No linear terms
 	VectorXd c = VectorXd::Zero(n);
